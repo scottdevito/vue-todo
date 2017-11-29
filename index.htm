@@ -8,8 +8,16 @@
 
 <body>
   <div id="app">
-    <p>hello</p>
+    <p>{{name}}</p>
   </div>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        name: "Long Island Javascript Group",
+      },
+    })
+  </script>
 </body>
 
 </html>
