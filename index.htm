@@ -8,12 +8,13 @@
 
 <body>
   <div id="app">
-    <p>{{name}}</p>
+    <p v-if="show" class="test">{{name}}</p>
   </div>
   <script>
     new Vue({
       el: "#app",
       data: {
+        show: true,
         name: "Long Island Javascript Group",
       },
     })
