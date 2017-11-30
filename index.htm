@@ -10,13 +10,16 @@
   <div id="app">
     <p v-if="show" class="test">{{name}}</p>
     <button @click="toggleShow('something')">{{buttonText}}</button>
+    <p v-for="num in numbers">{{num}}</p>
   </div>
+
   <script>
     new Vue({
       el: "#app",
       data: {
         show: true,
         name: "Long Island Javascript Group",
+        numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9]
       },
       computed: {
         buttonText() {
@@ -31,6 +34,7 @@
       }
     })
   </script>
+
 </body>
 
 </html>
