@@ -8,7 +8,7 @@
 
 <body>
   <div id="app">
-    <p v-if="show" class="test">{{name}}</p>
+    <p v-if="show" class="test">{{name | upperCase}}</p>
     <button @click="toggleShow('something')">{{buttonText}}</button>
     <p v-for="num in numbers">{{num}}</p>
 
@@ -35,6 +35,11 @@
           if (!n) {
             // Do something when when is false
           }
+        }
+      },
+      filters: {
+        upperCase(n) {
+          return n.toUpperCase();
         }
       },
       methods: {
