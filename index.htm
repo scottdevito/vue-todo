@@ -11,12 +11,16 @@
     <p v-if="show" class="test">{{name}}</p>
     <button @click="toggleShow('something')">{{buttonText}}</button>
     <p v-for="num in numbers">{{num}}</p>
+
+    <input v-model="inputVal" type="text" />
+    <p>{{inputVal}}</p>
   </div>
 
   <script>
     new Vue({
       el: "#app",
       data: {
+        inputVal: '',
         show: true,
         name: "Long Island Javascript Group",
         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9]
