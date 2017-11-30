@@ -9,7 +9,7 @@
 <body>
   <div id="app">
     <p v-if="show" class="test">{{name}}</p>
-    <button @click="toggleShow('something')">{{show ? 'hide' : 'show'}}</button>
+    <button @click="toggleShow('something')">{{buttonText}}</button>
   </div>
   <script>
     new Vue({
@@ -17,6 +17,11 @@
       data: {
         show: true,
         name: "Long Island Javascript Group",
+      },
+      computed: {
+        buttonText() {
+          return this.show ? 'hide' : 'show';
+        }
       },
       methods: {
         toggleShow(someParam) {
