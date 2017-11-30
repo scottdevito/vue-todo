@@ -30,6 +30,13 @@
           return this.show ? 'hide' : 'show';
         }
       },
+      watch: {
+        show(n) {
+          if (!n) {
+            // Do something when when is false
+          }
+        }
+      },
       methods: {
         toggleShow(someParam) {
           console.log(someParam);
